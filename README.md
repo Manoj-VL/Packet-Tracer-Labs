@@ -14,13 +14,13 @@ PC1--> SWITCH1 --> ROUTER --> PC2
 3. Used cables to connect them as show in the topology 
 4. Manually configured the 2 pcs with static ip address,gateway and subnet mask
 
-|Device | IP address | Subnetmask     |  Gateway     |
------------------------------------------------------
-| PC1   |192.168.1.10 | 255.255.255.0 | 192.168.1.1  |
-| PC2   |192.168.2.10 | 255.255.255.0 | 192.168.2.1  |
+| Device | IP address | Subnetmask     |  Gateway     |
+|--------|------------|----------------|--------------|
+|   PC1  |192.168.1.10 | 255.255.255.0 | 192.168.1.1  |
+|   PC2  |192.168.2.10 | 255.255.255.0 | 192.168.2.1  |
 
 5. Router interfaces show red dots by default because they are administratively down and must be enabled manually using the no shutdown command.
-6. Use CLI to configure the router,each port were manually configured with gateway subnetmask and manually turning on the router on that side
+6. Configured each router interface with ip address and subnet mask and enabled it on CLI.
 
 ```
 enable
@@ -34,11 +34,17 @@ ip address 192.168.2.1 255.255.255.0 # static entry of ip address and subnetmask
 no shutdown # manually turned on the port
 exit
 ```
+
 ### Key Observations
-- Router do not automatically turn on like switch
-- This is done by design -Routers are more complex devices and Cisco keeps interfaces shut by default to prevent unintended routing until its explicitly configured.
-### VERFICATION
--ping from PC1 to PC2
+- Router interfaces do not automatically turn on.
+- This is done by design -Routers are more complex devices and Cisco keeps interfaces shut by default to prevent unintended routing until it's explicitly configured.
+
+### Verification
+Ping from PC1 to PC2:
+```
 ping 192.168.2.10
-successfully transmitted 4 packets and recieved 4 as well
 Success rate is 100 percent (4/4)
+```
+
+### Screenshot
+<img width="1920" height="1080" alt="Screenshot (17)" src="https://github.com/user-attachments/assets/dbd76d76-b99d-4dbf-b8e0-e14ec2bd7f36" />
