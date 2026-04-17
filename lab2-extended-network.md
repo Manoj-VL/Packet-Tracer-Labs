@@ -4,7 +4,8 @@ Configure an extended version of network based on the previous lab by adding an 
 
 ## Topology
  PC1--> SWITCH1-->ROUTER-->SWITCH2-->PC2
-                               |---> PC3
+                               | 
+                               PC3
 
 ### Steps Used
 1.From the lab1 topology,deleted the connection between the router and PC2 
