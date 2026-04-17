@@ -10,8 +10,11 @@ Configure an extended version of network based on the previous lab by adding an 
 
 ### Steps Used
 1.From the lab1 topology,deleted the connection between the router and PC2 
+
 2.Added 2nd switch and new endpoint PC3
+
 3.Connections were made between the router to switch and switch to the 2 different PC
+
 4.Configured the new pc with new ip address,subnetmask,default gateway
 
 | DEVICE | IP ADDRESS | SUBNET MASK | DEFAULT GATEWAY|
