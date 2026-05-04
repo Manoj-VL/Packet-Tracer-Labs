@@ -3,6 +3,9 @@ Practical networking labs documenting my progression  from basic connectivity to
 
 Practice labs built while studying for CompTIA Network+.
 
+# Tools Used
+-Cisco Packet Tracer
+
 ## Labs
 
 | Lab | Title | Topics Covered |
