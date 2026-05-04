@@ -3,12 +3,12 @@
 ## Objective
 To observe how switches learn mac addresses at layer2
 
-### Topology 
+## Topology 
 ```
 [PC1]──[SW1]──[Router]──[SW2]──[PC2]
                             └──[PC3]
 ```
-### Steps used
+## Steps used
 1.Used the same topology and the same ip address from the previous labs were used
 2.All the ip addresses ,subnetmasks,gateways etc were checked before sending the ping  
 3.Before the ping test used the cli command to view the MAC address table of the switch
