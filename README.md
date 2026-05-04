@@ -9,4 +9,4 @@ Practice labs built while studying for CompTIA Network+.
 |-----|-------|----------------|
 | [Lab 1](lab1-basic-network.md) | Basic Interconnected Network | Static IP, inter-network routing, no shutdown |
 | [Lab 2](lab2-extended-network.md)| Extended Interconnected Network | Star Topology,Switch Expansion|
-| [Lab3](lab3-mac-address-table.md)| Switches and MAC Address Tables |OSI Model Layer 2,MAC learning ,Flooding|
+| [Lab 3](lab3-mac-address-table.md)| Switches and MAC Address Tables |OSI Model Layer 2,MAC learning ,Flooding|
