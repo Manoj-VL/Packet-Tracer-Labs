@@ -32,9 +32,10 @@
 #### Part 2:  Router
 1. Created new an SSID - `Test-WiFI`
 2. Selected the WPA2-PSK for authentication and created a PSK pass phrase
-		- Password - `admin123`
-3. Router IP address was assigned - `192.168.0.1`
-4. Enabled the DHCP Server 
+
+   - Password - `admin123`
+4. Router IP address was assigned - `192.168.0.1`
+5. Enabled the DHCP Server 
 		- Start IP address -`192.168.0.100`
 		- Maximum IP User - 50
 		- IP Address Range - `192.168.0.100` to `192.168.0.149`
