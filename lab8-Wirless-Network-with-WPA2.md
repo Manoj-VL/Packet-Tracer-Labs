@@ -15,6 +15,8 @@
 | Laptop 1 | 192.168.0.104 | 255.255.255.0 | 192.168.0.1     |
 | Laptop 2 | 192.168.0.102 | 255.255.255.0 | 192.168.0.1     |
 | PC1      | 192.168.0.105 | 255.255.255.0 | 192.168.0.1     |
+
+
 ** IP addresses were generated dynamically by Wireless router
 **Wireless Router used WRT300N**
 
