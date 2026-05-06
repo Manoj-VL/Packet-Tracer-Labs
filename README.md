@@ -17,5 +17,5 @@ Practice labs built while studying for CompTIA Network+.
 | 6 | Ports in Action | HTTP port 80, FTP port 21, plaintext risk | [View](lab6-Ports-in-Action.md) |
 | 7 | DHCP, DNS, SSH, Telnet | Ports 67/68, 53, 22, 23 | [View](lab7-DHCP-DNS-Telnet-SSH.md) |
 | 8 | Wireless with WPA2 | WPA2-PSK, DHCP, wireless bridging | [View](lab8-Wireless-Network-with-WPA2.md) |
-| 9 | VLAN Configuration | VLAN isolation, trunk ports, inter-VLAN routing | [View](lab9-Vlan-Configuration.md) |
+| 9 | VLAN Configuration | VLAN isolation, trunk ports, inter-VLAN routing | [View](lab9-VLAN-Configuration.md) |
 
