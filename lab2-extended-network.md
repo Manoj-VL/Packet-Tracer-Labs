@@ -1,4 +1,4 @@
-# Lab2 Extended Interconnected Network
+# Lab 2 Extended Interconnected Network
 # Objective
 Configure an extended version of network based on the previous lab by adding an switch and another pc thus forming a star topology
 
