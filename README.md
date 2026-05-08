@@ -18,4 +18,4 @@ Practice labs built while studying for CompTIA Network+.
 | 7 | DHCP, DNS, SSH, Telnet | Ports 67/68, 53, 22, 23 | [View](lab7-DHCP-DNS-Telnet-SSH.md) |
 | 8 | Wireless with WPA2 | WPA2-PSK, DHCP, wireless bridging | [View](lab8-Wireless-Network-with-WPA2.md) |
 | 9 | VLAN Configuration | VLAN isolation, trunk ports, inter-VLAN routing | [View](lab9-VLAN-Configuration.md) |
-
+|10 | Subnetting | IPv4 addressing,Subnetting,IP Ranges | [View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab10-subnetting.md) |
