@@ -19,3 +19,4 @@ Practice labs built while studying for CompTIA Network+.
 | 8 | Wireless with WPA2 | WPA2-PSK, DHCP, wireless bridging | [View](lab8-Wireless-Network-with-WPA2.md) |
 | 9 | VLAN Configuration | VLAN isolation, trunk ports, inter-VLAN routing | [View](lab9-VLAN-Configuration.md) |
 |10 | Subnetting | IPv4 addressing,Subnetting,IP Ranges | [View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab10-subnetting.md) |
+|11 | Static Routing| Static routing,Route Summarization,LPM,Stub Routers|[View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab11-Static-Routing.md)|
