@@ -1,13 +1,14 @@
 # Lab 11 - Static Routing 
 
 ## Objective
-- Configure all static routes on every router with router 2 central backbone router and verify full end to end connectivity across all networks
+- Configure all static routes on every router with router 2  as central backbone router and verify full end to end connectivity across all networks
 
 ## Topology
-(screenshot)
+<img width="1920" height="1080" alt="Lab 11 - Topology" src="https://github.com/user-attachments/assets/d8e66822-9afb-4926-84bc-ea702007d708" />
+
 
 ## Scenario
-- Given four routers in hub and spoke topology  - 1 backbone router connected to 3 router each serving separate LAN segments -5 LAN's
+- Given four routers  - 1 backbone router connected to 3 router each serving separate LAN segments -5 LAN's
 - Configure all routers to achieve interconnectivity between the various subnets and access to internet connection via public IP address
 
 ## Steps Used
@@ -23,7 +24,7 @@
 | PC 5   | 172.16.3.10  | 255.255.255.0 | 172.16.3.1      |
 
 - Configured each router interface which are directly connected to their respective LAN by assigning IP address to each interface with CLI command
-- For Router1 (assigning IP to interface Gigabit Ethernet 0/0)
+- For Router1 (assigning IP to interface Gig0/0)
 
 ```
 Router>enable
@@ -79,8 +80,12 @@ Router(config)# ip route 172.16.2.0 255.255.255.0 10.0.0.6
 Router(config)# ip route 172.16.3.0 255.255.255.0 10.0.0.10
 Router(config)# ip route 0.0.0.0 0.0.0.0 10.0.0.10 #default route to internet 
 ```
-(screenshot) IP interface brief
-(screenshot) Routing table router 2
+##### Router 2- IP Interface Brief
+<img width="1920" height="1080" alt="Ip interface brief - Router 2" src="https://github.com/user-attachments/assets/5d849854-9d90-413e-94dc-9f0535ad592a" />
+
+##### Routing table -Router 2
+<img width="1920" height="1080" alt="Routing Table - Router 2" src="https://github.com/user-attachments/assets/d2c3d745-c571-4922-9c00-c33571b3dd65" />
+
 #### Router 3&1
 
 - For Router 3,1 -Based on the topology there is only one  path to take to get to any other network other than the directly connections so default route was set to optimize to have only a default path which points towards the backbone routers interface
@@ -91,8 +96,12 @@ Router(config)# ip route 0.0.0.0 0.0.0.0 10.0.0.2
 *Router 3*
 Router(config)# ip route 0.0.0.0 0.0.0.0 10.0.0.5
 ```
-(screenshot) Routing table router 3
-(screenshot) Routing table router 1
+##### Routing table -Router 3
+<img width="1920" height="1080" alt="Routing Table - Router 3" src="https://github.com/user-attachments/assets/79b2d75e-ceb4-4da3-9362-6552bf325026" />
+
+##### Routing table -Router 1
+<img width="1920" height="1080" alt="Routing Table - Router 1" src="https://github.com/user-attachments/assets/1736ec39-e024-4e6b-9b42-31b25e34243e" />
+
 #### Router 4
 
 - For Router 4 -  cannot assign a default path like  in the case of router 3 and 1 it has an internal connection going towards the backbone router and external connection to the internet
@@ -104,9 +113,12 @@ Router(config)#ip route 0.0.0.0 0.0.0.0 203.0.113.2
 - Configuring six individual static routes on Router4 is functional but inefficient — route summarization reduces this to two entries, minimizing routing table size and forwarding overhead
 #### Route Summarization for Router 4
 ###### Left
-Network          1st Octet      2nd Octet   3rd Octet
-192.168.1.0  ->  11000000 . 10101000 . 000000  01 . 00000000
-192.168.2.0  ->  11000000 . 10101000 . 000000  10 . 00000000
+
+|Network        |1st Octet  | 2nd Octet| 3rd Octet    |4th Octet|
+
+|192.168.1.0  ->| 11000000  | 10101000 | 000000  01 . |00000000 |
+
+|192.168.2.0  ->|  11000000 | 10101000 | 000000  10 . |00000000 |
 
 - The 1st and 2nd octet are the same - 8+8 = 16 bits
 - 3rd octet first 6 bits are the same -
@@ -117,8 +129,10 @@ Network          1st Octet      2nd Octet   3rd Octet
 Router(config) # ip route 192.168.0.0 255.255.252.0 10.0.0.9
 ```
 ###### Right
-Network          1st Octet   2nd Octet   3rd Octet
+Network          1st Octet  2nd Octet  3rd Octet
+
 172.16.1.0   ->  10101100 . 00010000 . 000000 01 . 00000000
+
 172.16.2.0   ->  10101100 . 00010000 . 000000 10 . 00000000
 
 - The 1st and 2nd octet are the same - 8+8 = 16 bits
@@ -132,21 +146,29 @@ Network          1st Octet   2nd Octet   3rd Octet
 Router(config) # ip route 172.16.0.0 255.255.252.0 10.0.0.9
 ```
 
-**(screenshot) Routing table router 4**
+##### Routing Table - Router 4
+<img width="1920" height="1080" alt="Routing Table - Router 4" src="https://github.com/user-attachments/assets/932510bd-260a-4f7c-8cc9-b3924d16bb37" />
+
 ## Verification
 - Ping from PC 1 to PC 2  (same router, different subnets ) - Successful 
-(Screenshot)
+<img width="1920" height="1080" alt="Ping PC1 - PC2 - same router" src="https://github.com/user-attachments/assets/5694ebe1-8915-469f-ab13-879256956d9f" />
+
+
 
 - Ping from PC 1 to PC 3  (via backbone router) - Successful
-(screenshot)
+<img width="1920" height="1080" alt="Ping PC1 - PC3 -Via router 2" src="https://github.com/user-attachments/assets/fff4326e-00b6-4832-956b-65d0d48a2907" />
 
 - Ping from PC 1 to PC 5  (multi hop) - Successful 
-(screenshot)
+<img width="1920" height="1080" alt="Ping PC1 -PC5 -Multi hop" src="https://github.com/user-attachments/assets/faa22702-60e0-438f-9dfb-d9acb2e62c4f" />
+
 
 - Ping from PC 3 to PC 4  (same router, different subnets) - Successful 
-(screenshot)
+<img width="1920" height="1080" alt="Ping PC3 - PC4 - same router" src="https://github.com/user-attachments/assets/32e376c4-a43d-49fc-9876-79b007b3f5c2" />
+
+
 - Ping from PC 5 to PC 1  (multi hop - reverse path) - Successful 
-(screenshot)
+<img width="1920" height="1080" alt="Ping PC5 - PC1 - reverse path" src="https://github.com/user-attachments/assets/cf5590cf-67c0-4353-a44d-34984a512980" />
+
 
 
 ## Observation
