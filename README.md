@@ -20,3 +20,4 @@ Practice labs built while studying for CompTIA Network+.
 | 9 | VLAN Configuration | VLAN isolation, trunk ports, inter-VLAN routing | [View](lab9-VLAN-Configuration.md) |
 |10 | Subnetting | IPv4 addressing,Subnetting,IP Ranges | [View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab10-subnetting.md) |
 |11 | Static Routing| Static routing,Route Summarization,LPM,Stub Routers|[View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab11-Static-Routing.md)|
+|12 | NAT & PAT | Address Transalation,Access Lists,PAT |[View](https://github.com/Manoj-VL/Packet-Tracer-Labs/blob/main/lab12-PAT%20and%20NAT.md) |
